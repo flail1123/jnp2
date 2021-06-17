@@ -1,0 +1,56 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+jar {
+	archivesBaseName = 'sweaters'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.5.2'
+//    runtimeOnly 'com.h2database:h2'
+	implementation "javax.xml.bind:jaxb-api:2.2.11"
+
+
+	def camelVersion = '3.9.0'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-quartz'
+	implementation 'org.springframework.boot:spring-boot-starter-batch'
+
+	implementation "org.apache.camel.springboot:camel-http-starter:$camelVersion"
+	implementation "org.apache.camel.springboot:camel-spring-boot-starter:$camelVersion"
+	implementation "org.apache.camel.springboot:camel-servlet-starter:$camelVersion"
+	implementation "org.apache.camel.springboot:camel-controlbus-starter:$camelVersion"
+
+	implementation "org.apache.camel:camel-quartz:$camelVersion"
+	implementation "org.apache.camel:camel-weather:$camelVersion"
+//	implementation "org.apache.camel:camel-jackson:$camelVersion"
+	implementation "org.apache.camel:camel-rest:$camelVersion"
+	implementation "org.apache.camel:camel-controlbus:$camelVersion"
+
+	implementation "org.apache.camel:camel-core:$camelVersion"
+	implementation group: 'org.apache.camel', name: 'camel-mail', version: '3.9.0'
+
+	implementation "org.apache.camel:camel-xchange:$camelVersion"
+
+	implementation 'com.google.code.gson:gson:2.8.6'
+
+	implementation 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
