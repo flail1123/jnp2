@@ -20,3 +20,5 @@ com/example/project1/Factory/BlueProduction.java
  com.example.project1.Factory.BlueProduction
 com/example/project1/Factory/YellowProduction.java
  com.example.project1.Factory.YellowProduction
+com/example/project1/Context.java
+ com.example.project1.Context

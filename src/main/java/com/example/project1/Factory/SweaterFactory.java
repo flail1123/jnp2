@@ -50,18 +50,15 @@ public class SweaterFactory extends RouteBuilder {
 
         from("direct:produceRed")
                 .setBody (simple (RED_QUANTITY))
-                .process(redProduction)
-                .log(String.valueOf(body()));
+                .process(redProduction);
 
         from("direct:produceBlue")
                 .setBody (simple (BLUE_QUANTITY))
-                .process(blueProduction)
-                .log(String.valueOf(body()));
+                .process(blueProduction);
 
         from("direct:produceYellow")
                 .setBody (simple (YELLOW_QUANTITY))
-                .process(yellowProduction)
-                .log(String.valueOf(body()));
+                .process(yellowProduction);
 
 
 //        from("direct:weather").to("file:C:/inputFolder?fileName=info.txt"); // &fileExist=Append

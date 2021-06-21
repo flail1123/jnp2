@@ -28,6 +28,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-quartz'
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
 	implementation "org.apache.camel.springboot:camel-http-starter:$camelVersion"
 	implementation "org.apache.camel.springboot:camel-spring-boot-starter:$camelVersion"
@@ -36,7 +37,6 @@ dependencies {
 
 	implementation "org.apache.camel:camel-quartz:$camelVersion"
 	implementation "org.apache.camel:camel-weather:$camelVersion"
-//	implementation "org.apache.camel:camel-jackson:$camelVersion"
 	implementation "org.apache.camel:camel-rest:$camelVersion"
 	implementation "org.apache.camel:camel-controlbus:$camelVersion"
 

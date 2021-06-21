@@ -23,6 +23,7 @@ public class Project3Application {
 
 			log.info("-------------------------------");
 			log.info("Log says something :)");
+			System.out.println("Working Directory = " + System.getProperty("user.dir"));
 			log.info("-------------------------------");
 
 		};
