@@ -1,28 +1,30 @@
-com/example/project1/UserEmail.java
- com.example.project1.UserEmail
-com/example/project1/MainPageController.java
- com.example.project1.MainPageController
-com/example/project1/Factory/SweaterFactory.java
- com.example.project1.Factory.SweaterFactory
+com/example/project1/WebControl/Context.java
+ com.example.project1.WebControl.Context
+com/example/project1/SweaterFactory/SweaterFactory.java
+ com.example.project1.SweaterFactory.SweaterFactory
 com/example/project1/Project3Application.java
  com.example.project1.Project3Application
-com/example/project1/BlueSweater.java
- com.example.project1.BlueSweater
-com/example/project1/Factory/RedProduction.java
- com.example.project1.Factory.RedProduction
-com/example/project1/YellowSweater.java
- com.example.project1.YellowSweater
+com/example/project1/Global.java
+ com.example.project1.Global
 com/example/project1/SweaterWarehouse.java
  com.example.project1.SweaterWarehouse
-com/example/project1/EmailRepository.java
- com.example.project1.EmailRepository
-com/example/project1/Factory/BlueProduction.java
- com.example.project1.Factory.BlueProduction
-com/example/project1/Sweater.java
- com.example.project1.Sweater
-com/example/project1/RedSweater.java
- com.example.project1.RedSweater
-com/example/project1/Factory/YellowProduction.java
- com.example.project1.Factory.YellowProduction
-com/example/project1/Context.java
- com.example.project1.Context
+com/example/project1/SweaterFactory/RedSweater.java
+ com.example.project1.SweaterFactory.RedSweater
+com/example/project1/EmailService/EmailRepository.java
+ com.example.project1.EmailService.EmailRepository
+com/example/project1/WebControl/MainPageController.java
+ com.example.project1.WebControl.MainPageController
+com/example/project1/SweaterFactory/YellowProduction.java
+ com.example.project1.SweaterFactory.YellowProduction
+com/example/project1/SweaterFactory/RedProduction.java
+ com.example.project1.SweaterFactory.RedProduction
+com/example/project1/SweaterFactory/Sweater.java
+ com.example.project1.SweaterFactory.Sweater
+com/example/project1/SweaterFactory/BlueProduction.java
+ com.example.project1.SweaterFactory.BlueProduction
+com/example/project1/EmailService/UserEmail.java
+ com.example.project1.EmailService.UserEmail
+com/example/project1/SweaterFactory/BlueSweater.java
+ com.example.project1.SweaterFactory.BlueSweater
+com/example/project1/SweaterFactory/YellowSweater.java
+ com.example.project1.SweaterFactory.YellowSweater
