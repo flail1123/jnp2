@@ -35,8 +35,11 @@
                 <p>1,082 &euro;</p>
                 <button class="w3-button w3-black w3-margin-bottom mywidth" onclick="document.getElementById('ticketModal').style.display='block'">Buy</button>
                 Available: <div th:text="${context.available_quantity[0]}"></div>
-                <input class="w3-input w3-border mywidth mypad" type="text" placeholder="Email" required name="Email">
-                <button class="w3-button w3-black mywidth w3-margin-top" onclick="">Notify me</button>
+                <form method="post" th:action="@{/index/}" th:object="${userEmail}">
+                    <input id="email1" class="w3-input w3-border mywidth mypad" placeholder="Email" required type="text" th:field="*{email}">
+                    <input id="sweaterId1" class="w3-input w3-border mywidth mypad" placeholder="Id" required type="text" th:field="*{sweaterId}">
+                    <input class="w3-button w3-black mywidth w3-margin-top" type="submit" value="Notify me">
+                </form>
             </div>
             <div class="w3-third">
                 <p>PROENZA SCHOULER Cardigan Yellow</p>
@@ -44,8 +47,11 @@
                 <p>298 &euro;</p>
                 <button class="w3-button w3-black w3-margin-bottom mywidth" onclick="document.getElementById('ticketModal').style.display='block'">Buy</button>
                 Available: <div th:text="${context.available_quantity[1]}"></div>
-                <input class="w3-input w3-border mywidth mypad" type="text" placeholder="Email" required name="Email">
-                <button class="w3-button w3-black mywidth w3-margin-top" onclick="">Notify me</button>
+                <form method="post" th:action="@{/index/}" th:object="${userEmail}">
+                    <input id="email2" class="w3-input w3-border mywidth mypad" placeholder="Email" required type="text" th:field="*{email}">
+                    <input id="sweaterId2" class="w3-input w3-border mywidth mypad" placeholder="Id" required type="text" th:field="*{sweaterId}">
+                    <input class="w3-button w3-black mywidth w3-margin-top" type="submit" value="Notify me">
+                </form>
             </div>
             <div class="w3-third">
                 <p>GUCCI Red GG Jacquard Lame And Wool Cardigan</p>
@@ -53,14 +59,19 @@
                 <p>1200 &euro;</p>
                 <button class="w3-button w3-black w3-margin-bottom mywidth" onclick="document.getElementById('ticketModal').style.display='block'">Buy</button>
                 Available: <div th:text="${context.available_quantity[2]}"></div>
-                <input class="w3-input w3-border mywidth mypad" type="text" placeholder="Email" required name="Email">
-                <button class="w3-button w3-black mywidth w3-margin-top" onclick="">Notify me</button>
+                <form method="post" th:action="@{/index/}" th:object="${userEmail}">
+                    <input id="email3" class="w3-input w3-border mywidth mypad" placeholder="Email" required type="text" th:field="*{email}">
+                    <input id="sweaterId3" class="w3-input w3-border mywidth mypad" placeholder="Id" required type="text" th:field="*{sweaterId}">
+                    <input class="w3-button w3-black mywidth w3-margin-top" type="submit" value="Notify me">
+                </form>
+            </div>
             </div>
         </div>
     </div>
 
 </div>
 
+<div th:text="${context.users_email}"></div>
 <p class="w3-center w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 
 </body>

@@ -15,6 +15,14 @@ public class Context {
         this.users_email = new String("");
     }
 
+    public Context(int a, int b, int c, String s) {
+        this.available_quantity[0] = a;
+        this.available_quantity[1] = b;
+        this.available_quantity[2] = c;
+        this.users_choice = -1;
+        this.users_email = s;
+    }
+
     public Context(int c) {
         this.users_choice = c;
         this.users_email = new String("");

@@ -2,6 +2,7 @@ package com.example.project1.Factory;
 import com.example.project1.RedSweater;
 import com.example.project1.Sweater;
 import com.example.project1.SweaterWarehouse;
+import com.example.project1.UserEmail;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 
@@ -21,11 +22,6 @@ public class RedProduction implements Processor {
         for (int i = 0; i < howMany; i++)
             sweater.produce(warehouse);
 
-        StringBuilder answer = new StringBuilder("All sweaters:\n");
-        for (Sweater s: warehouse.findAll()) {
-            answer.append(s.toString());
-            answer.append('\n');
-        }
-        exchange.getIn().setBody(answer);
+        exchange.getIn().setBody("");
     }
 }

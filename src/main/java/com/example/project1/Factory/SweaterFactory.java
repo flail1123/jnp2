@@ -1,9 +1,6 @@
 package com.example.project1.Factory;
 
-import com.example.project1.BlueSweater;
-import com.example.project1.RedSweater;
-import com.example.project1.SweaterWarehouse;
-import com.example.project1.YellowSweater;
+import com.example.project1.*;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
@@ -11,7 +8,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class SweaterFactory extends RouteBuilder {
     private final SweaterWarehouse warehouse;
-
 
     public SweaterFactory(SweaterWarehouse warehouse) {
         this.warehouse = warehouse;

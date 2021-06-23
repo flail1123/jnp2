@@ -1,9 +1,7 @@
-com/example/project1/Sweater.java
- com.example.project1.Sweater
+com/example/project1/UserEmail.java
+ com.example.project1.UserEmail
 com/example/project1/MainPageController.java
  com.example.project1.MainPageController
-com/example/project1/RedSweater.java
- com.example.project1.RedSweater
 com/example/project1/Factory/SweaterFactory.java
  com.example.project1.Factory.SweaterFactory
 com/example/project1/Project3Application.java
@@ -16,8 +14,14 @@ com/example/project1/YellowSweater.java
  com.example.project1.YellowSweater
 com/example/project1/SweaterWarehouse.java
  com.example.project1.SweaterWarehouse
+com/example/project1/EmailRepository.java
+ com.example.project1.EmailRepository
 com/example/project1/Factory/BlueProduction.java
  com.example.project1.Factory.BlueProduction
+com/example/project1/Sweater.java
+ com.example.project1.Sweater
+com/example/project1/RedSweater.java
+ com.example.project1.RedSweater
 com/example/project1/Factory/YellowProduction.java
  com.example.project1.Factory.YellowProduction
 com/example/project1/Context.java
