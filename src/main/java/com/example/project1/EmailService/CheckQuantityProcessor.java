@@ -8,16 +8,16 @@ import com.example.project1.SweaterWarehouse;
 import org.apache.camel.Processor;
 import org.apache.camel.Exchange;
 
-import java.awt.*;
-
 
 public class CheckQuantityProcessor implements Processor {
     EmailRepository emailRepository;
     SweaterWarehouse sweaterWarehouse;
+
     public CheckQuantityProcessor(EmailRepository emailRepository, SweaterWarehouse sweaterWarehouse) {
         this.emailRepository = emailRepository;
         this.sweaterWarehouse = sweaterWarehouse;
     }
+
     public void process(Exchange exchange) {
 
         System.out.println(exchange.getIn().getBody(String.class));
@@ -36,8 +36,8 @@ public class CheckQuantityProcessor implements Processor {
         }
         String result = "";
         for (UserEmail u: emailRepository.findAll()){
-            System.out.println("email: " + u.getEmail());
-            System.out.println("id: " + u.getSweaterId());
+//            System.out.println("email: " + u.getEmail());
+//            System.out.println("id: " + u.getSweaterId());
             if (u.getSweaterId() == 0 && redQuantity > 0){
                 result = u.getEmail();
                 emailRepository.delete(u);
@@ -55,7 +55,7 @@ public class CheckQuantityProcessor implements Processor {
             }
         }
 
-        System.out.println(result+"!!!!!!!!!!!!!!!!!!!!!!!");
+//        System.out.println(result+"!!!!!!!!!!!!!!!!!!!!!!!");
         System.out.println("-----------------------------------------------------------------------");
         exchange.getIn().setBody(result);
     }

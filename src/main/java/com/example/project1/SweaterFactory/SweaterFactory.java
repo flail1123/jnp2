@@ -49,15 +49,5 @@ public class SweaterFactory extends RouteBuilder {
         from("direct:produceYellow")
                 .setBody (simple (Global.YELLOW_QUANTITY))
                 .process(yellowProduction);
-
-
-//        from("direct:weather").to("file:C:/inputFolder?fileName=info.txt"); // &fileExist=Append
-
-
-//        from("file:C:/inputFolder?noop=true").delay(500).doTry().setHeader("subject", simple("Your daily brief"))
-//                .setHeader("to", simple("kmarkowski2000@outlook.com"))
-//                .to("smtps://smtp.gmail.com:465?username=yourdailyinformation@gmail.com&password=a1b2c3d4!");
     }
-
-
 }

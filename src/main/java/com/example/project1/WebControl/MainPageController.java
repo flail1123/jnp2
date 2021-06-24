@@ -8,7 +8,6 @@ import com.example.project1.SweaterFactory.RedSweater;
 import com.example.project1.SweaterFactory.Sweater;
 import com.example.project1.SweaterFactory.YellowSweater;
 import com.example.project1.SweaterWarehouse;
-import com.example.project1.WebControl.Context;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.ArrayList;
 
 @Controller
 public class MainPageController {
@@ -44,7 +42,6 @@ public class MainPageController {
             if (s instanceof BlueSweater)
                 blueQuantity++;
         }
-
 
         // generate context
         Context c = new Context(blueQuantity, yellowQuantity, redQuantity);
@@ -76,7 +73,6 @@ public class MainPageController {
         return -1;
     }
 
-
     @RequestMapping(value = "/index", method = RequestMethod.POST)
     public String indexForm(@ModelAttribute UserEmail userEmail, Model model) {
 
@@ -96,11 +92,4 @@ public class MainPageController {
         model.addAttribute("userEmail", new UserEmail());
         return "redirect:/index";
     }
-
-//    @RequestMapping(value = "/index", method = RequestMethod.GET)
-//    public String indexGet(@ModelAttribute UserEmail userEmail, Model model) {
-//        UserEmail email = emailRepository.save(userEmail);
-//        model.addAttribute("userEmail", new UserEmail());
-//        return "redirect:/index";
-//    }
 }

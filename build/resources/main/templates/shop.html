@@ -16,12 +16,14 @@
     <style>
     body { font-family: "Lato", sans-serif }
     .mywidth { width: 80%; }
+    .email-newsletter-width { width: 250px; }
     .mypad { margin-left: 10%; }
     .togg { display: none; }
     .togg.visible { display: block; }
     .togg-buy { display: block; }
     .togg-buy.invisible { display: none; }
     .hide { display: none; }
+    .next-to { display: inline; }
     </style>
 
     <script th:inline="javascript">
@@ -39,6 +41,24 @@
         <h2 class="w3-wide">OUR SWEATERS</h2>
         <p class="w3-opacity"><i>Welcome to Sweater Paradise!</i></p>
         <p class="w3-justify">You can buy one! If You want one that's sold out, tell us your e-mail address and we will send You a notice, when product is back in stock! (And if You seriously want one then search at lyst.com because they are real.)</p>
+
+        <!-- newsletter -->
+        <p class="w3-justify">Sign up for a newsletter to receive information about discounts!</p>
+        <div class="w3-row w3-padding-8">
+        <div id="form-newsletter">
+            <form>
+                <div class="w3-third">
+                    <input id="email-newsletter" class="w3-input w3-border email-newsletter-width next-to" placeholder="Email" required type="text">
+                </div>
+                <div class="w3-third">
+                    <input class="w3-button w3-black w3-border mywidth mypad next-to" type="submit" value="Sign up">
+                </div>
+                <div class="w3-third">
+                </div>
+            </form>
+        </div>
+        </div>
+
         <div class="w3-row w3-padding-32">
             <div class="w3-third">
                 <p>KHAITE Wallis Blue Roll-neck Cashmere Sweater</p>
@@ -47,7 +67,7 @@
                 <form method="post" th:action="@{/index/}" th:object="${userEmail}">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Email" type="hidden" th:value="${context.empty}" name="email">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Id" type="hidden" th:value="${context.idb1}" name="sweaterId">
-                    <button type="submit" onclick="buy()" id="button1" class="w3-button w3-black w3-margin-bottom mywidth togg-buy">Buy</button>
+                    <button type="submit" onclick="buy()" id="button1" class="w3-button w3-black w3-margin-bottom mywidth mypad togg-buy">Buy</button>
                 </form>
                 Available: <div th:text="${context.available_quantity[0]}"></div>
                 <div id="form1" class="togg">
@@ -65,7 +85,7 @@
                 <form method="post" th:action="@{/index/}" th:object="${userEmail}">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Email" type="hidden" th:value="${context.empty}" name="email">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Id" type="hidden" th:value="${context.idb2}" name="sweaterId">
-                    <button type="submit" onclick="buy()" id="button2" class="w3-button w3-black w3-margin-bottom mywidth togg-buy">Buy</button>
+                    <button type="submit" onclick="buy()" id="button2" class="w3-button w3-black w3-margin-bottom mywidth mypad togg-buy">Buy</button>
                 </form>
                 Available: <div th:text="${context.available_quantity[1]}"></div>
                 <div id="form2" class="togg">
@@ -83,7 +103,7 @@
                 <form method="post" th:action="@{/index/}" th:object="${userEmail}">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Email" type="hidden" th:value="${context.empty}" name="email">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Id" type="hidden" th:value="${context.idb3}" name="sweaterId">
-                    <button type="submit" onclick="buy()" id="button3" class="w3-button w3-black w3-margin-bottom mywidth togg-buy">Buy</button>
+                    <button type="submit" onclick="buy()" id="button3" class="w3-button w3-black w3-margin-bottom mywidth mypad togg-buy">Buy</button>
                 </form>
                 Available: <div th:text="${context.available_quantity[2]}"></div>
                 <div id="form3" class="togg">
@@ -100,8 +120,6 @@
 
 </div>
 
-<!--<div th:text="${context.users_email}"></div>-->
-<!--<div th:text="${context.users_choice}"></div>-->
 <p class="w3-center w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 
 </body>

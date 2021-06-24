@@ -1,9 +1,7 @@
 package com.example.project1.EmailService;
 
 import com.example.project1.Global;
-import com.example.project1.SweaterFactory.*;
 import com.example.project1.SweaterWarehouse;
-import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
@@ -41,7 +39,7 @@ public class Notifier extends RouteBuilder {
                 .delay(5).doTry().setHeader("subject", simple("Sweater notifier"))
                 .setHeader("to", simple("${body}"))
                 .setBody(simple("Your sweater is now available."))
-                .to("smtps://smtp.gmail.com:465?username=yourdailyinformation@gmail.com&password=a1b2c3d4!");
+                .to("smtps://smtp.gmail.com:465?username=SweaterInfo@gmail.com&password=a1b2c3d4!");
     }
 
 

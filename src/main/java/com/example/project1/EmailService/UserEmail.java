@@ -14,11 +14,6 @@ public class UserEmail {
     private Integer sweaterId;
     private String email;
 
-//    public UserEmail(String email, Integer sweaterId) {
-//        this.email = email;
-//        this.sweaterId = sweaterId;
-//    }
-
     public String getEmail() {
         return email;
     }
