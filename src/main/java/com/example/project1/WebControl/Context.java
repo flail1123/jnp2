@@ -29,13 +29,6 @@ public class Context {
         this.users_email = new String("");
     }
 
-    public Context(int a, int b, int c, String s, int choice) {
-        this.available_quantity[0] = a;
-        this.available_quantity[1] = b;
-        this.available_quantity[2] = c;
-        this.users_choice = choice;
-        this.users_email = s;
-    }
 
     public Context(int c) {
         this.users_choice = c;
@@ -45,22 +38,6 @@ public class Context {
     public Context(int c, String email) {
         this.users_choice = c;
         this.users_email = email;
-    }
-
-    public int getUsers_choice() {
-        return users_choice;
-    }
-
-    public void setUsers_choice(int users_choice) {
-        this.users_choice = users_choice;
-    }
-
-    public String getUsers_email() {
-        return users_email;
-    }
-
-    public void setUsers_email(String users_email) {
-        this.users_email = users_email;
     }
 
     public int[] getAvailable_quantity() {

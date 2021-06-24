@@ -2,6 +2,10 @@ com/example/project1/WebControl/Context.java
  com.example.project1.WebControl.Context
 com/example/project1/SweaterFactory/SweaterFactory.java
  com.example.project1.SweaterFactory.SweaterFactory
+com/example/project1/SweaterFactory/BlueSweater.java
+ com.example.project1.SweaterFactory.BlueSweater
+com/example/project1/SweaterFactory/YellowSweater.java
+ com.example.project1.SweaterFactory.YellowSweater
 com/example/project1/Project3Application.java
  com.example.project1.Project3Application
 com/example/project1/Global.java
@@ -24,7 +28,7 @@ com/example/project1/SweaterFactory/BlueProduction.java
  com.example.project1.SweaterFactory.BlueProduction
 com/example/project1/EmailService/UserEmail.java
  com.example.project1.EmailService.UserEmail
-com/example/project1/SweaterFactory/BlueSweater.java
- com.example.project1.SweaterFactory.BlueSweater
-com/example/project1/SweaterFactory/YellowSweater.java
- com.example.project1.SweaterFactory.YellowSweater
+com/example/project1/EmailService/CheckQuantityProcessor.java
+ com.example.project1.EmailService.CheckQuantityProcessor
+com/example/project1/EmailService/Notifier.java
+ com.example.project1.EmailService.Notifier

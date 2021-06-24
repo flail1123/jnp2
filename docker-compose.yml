@@ -1,0 +1,21 @@
+services:
+  mariadb:
+    image: mariadb:latest
+    restart: 'always'
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: banksecret
+      MYSQL_DATABASE: bank
+      MYSQL_USER: bank
+      MYSQL_PASSWORD: banksecret
+    container_name: mariadb
+  bankapp:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/io
+    container_name: sweaters
+
+

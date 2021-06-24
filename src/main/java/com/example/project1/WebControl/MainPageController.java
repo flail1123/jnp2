@@ -29,33 +29,6 @@ public class MainPageController {
         this.emailRepository = emailRepository;
     }
 
-    @RequestMapping("/welcome")
-    public String welcome() {
-        return "Welcome";
-    }
-
-    //// To nie działa w thymeleaf:
-
-//    @RequestMapping("/list")
-//    public String listSweaters() {
-//        int redQuantity = 0;
-//        int yellowQuantity = 0;
-//        int blueQuantity = 0;
-//        StringBuilder answer = new StringBuilder("All sweaters:<br>");
-//        for (Sweater s: warehouse.findAll()) {
-//            if (s instanceof RedSweater)
-//                redQuantity++;
-//            if (s instanceof YellowSweater)
-//                yellowQuantity++;
-//            if (s instanceof BlueSweater)
-//                blueQuantity++;
-//        }
-//        answer.append("Red sweaters: ").append(redQuantity).append("<br>");
-//        answer.append("Blue sweaters: ").append(blueQuantity).append("<br>");
-//        answer.append("Yellow sweaters: ").append(yellowQuantity).append("<br>");
-//        return answer.toString();
-//    }
-
     @RequestMapping(value = "/index")
     public String index(Model model) {
         int redQuantity = 0;
@@ -72,19 +45,9 @@ public class MainPageController {
                 blueQuantity++;
         }
 
-        Iterable<UserEmail> emails = emailRepository.findAll();
-        String email1 = new String("");
-        int choice = -1;
-        int i = 0;
-        for (UserEmail e : emails)
-            i++;
-        if (i > 0) {
-            email1 = ((ArrayList<UserEmail>) emails).get(0).getEmail();
-            choice = ((ArrayList<UserEmail>) emails).get(0).getSweaterId();
-        }
 
         // generate context
-        Context c = new Context(blueQuantity, yellowQuantity, redQuantity, email1, choice);
+        Context c = new Context(blueQuantity, yellowQuantity, redQuantity);
         model.addAttribute("context", c);
         model.addAttribute("userEmail", new UserEmail());
         return "shop";
