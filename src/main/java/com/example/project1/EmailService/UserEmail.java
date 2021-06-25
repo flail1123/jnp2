@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
 
 @Entity
 public class UserEmail {
@@ -13,6 +14,7 @@ public class UserEmail {
 
     private Integer sweaterId;
     private String email;
+    private LocalDate lastNewsletter;
 
     public String getEmail() {
         return email;
@@ -29,4 +31,14 @@ public class UserEmail {
     public void setSweaterId(Integer sweaterId) {
         this.sweaterId = sweaterId;
     }
+
+    public LocalDate getLastNewsletter() {
+        return lastNewsletter;
+    }
+
+    public void setLastNewsletter(LocalDate lastNewsletter) {
+        this.lastNewsletter = lastNewsletter;
+    }
+
+
 }

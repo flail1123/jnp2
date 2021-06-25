@@ -5,6 +5,9 @@ import com.example.project1.SweaterWarehouse;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Component
 public class Notifier extends RouteBuilder {
@@ -35,11 +38,13 @@ public class Notifier extends RouteBuilder {
 
         from("direct:timeToCheck").process(checkQuantityProcessor)
                 .choice()
-                .when(simple("${body} != ''"))
-                .delay(5).doTry().setHeader("subject", simple("Sweater notifier"))
-                .setHeader("to", simple("${body}"))
-                .setBody(simple("Your sweater is now available."))
-                .to("smtps://smtp.gmail.com:465?username=SweaterInfo@gmail.com&password=a1b2c3d4!");
+                .when(simple("${body[email]} != ''"))
+                .delay(5).doTry().setHeader("subject", simple("${body[title]}"))
+                .setHeader("to", simple("${body[email]}"))
+                .setBody(simple("${body[message]}"))
+                .to("smtps://smtp.gmail.com:465?username=yourdailyinformation@gmail.com&password=!A1B2C3D4!abcd");
+
+
     }
 
 

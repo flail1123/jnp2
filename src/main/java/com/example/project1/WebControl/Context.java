@@ -2,6 +2,7 @@ package com.example.project1.WebControl;
 
 import com.example.project1.Global;
 
+import java.time.LocalTime;
 import java.util.Arrays;
 
 public class Context {
@@ -13,13 +14,18 @@ public class Context {
     public final String empty = new String("");
     // Different ids below are for reliable distinction between requested procedure.
     // id sent when demanding notifying
-    public final int id1 = 0;
-    public final int id2 = 1;
-    public final int id3 = 2;
+    public final int id0 = Global.id0;
+    public final int id1 = Global.id1;
+    public final int id2 = Global.id2;
+    public final int id3 = Global.id3;
     // id sent when buying object
+    public final int idb0 = Global.newsletterId;
     public final int idb1 = Global.buyId1;
     public final int idb2 = Global.buyId2;
     public final int idb3 = Global.buyId3;
+    public int redPrice = Global.redPrice;
+    public int bluePrice = Global.bluePrice;
+    public int yellowPrice = Global.yellowPrice;
 
     public Context(int a, int b, int c) {
         this.available_quantity[0] = a;
@@ -27,6 +33,12 @@ public class Context {
         this.available_quantity[2] = c;
         this.users_choice = -1;
         this.users_email = new String("");
+        if (LocalTime.now().isAfter(LocalTime.parse("10:00:00")) && LocalTime.now().isBefore(LocalTime.parse("13:00:00"))){
+            this.redPrice -= 0.1 * this.redPrice;
+            this.bluePrice -= 0.1 * this.bluePrice;
+            this.yellowPrice -= 0.1 * this.yellowPrice;
+
+        }
     }
 
 

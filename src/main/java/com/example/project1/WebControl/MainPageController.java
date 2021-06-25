@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.time.LocalDate;
+
 
 @Controller
 public class MainPageController {
@@ -77,7 +79,9 @@ public class MainPageController {
     public String indexForm(@ModelAttribute UserEmail userEmail, Model model) {
 
         int boughtItem = -1;
-
+        System.out.println("SweaterId: " + userEmail.getSweaterId());
+        if (userEmail.getSweaterId() == Global.id0)
+            userEmail.setLastNewsletter(LocalDate.now().minusDays(1));
         if (userEmail.getSweaterId() == Global.buyId1)
             boughtItem = findById(0);
         if (userEmail.getSweaterId() == Global.buyId2)
