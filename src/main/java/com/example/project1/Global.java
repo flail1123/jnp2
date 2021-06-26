@@ -6,6 +6,8 @@ public class Global {
     public static int id2 = 2;
     public static int id3 = 3;
 
+    // custom ids for distinction between received form options:
+    // (newsletter / buying / asking for notification)
     public static int newsletterId = 10;
     public static int buyId1 = 11;
     public static int buyId2 = 12;

@@ -16,14 +16,11 @@
     <style>
     body { font-family: "Lato", sans-serif }
     .mywidth { width: 80%; }
-    .email-newsletter-width { width: 250px; }
     .mypad { margin-left: 10%; }
     .togg { display: none; }
     .togg.visible { display: block; }
     .togg-buy { display: block; }
     .togg-buy.invisible { display: none; }
-    .hide { display: none; }
-    .next-to { display: inline; }
     </style>
 
     <script th:inline="javascript">
@@ -59,13 +56,12 @@
                 <p>KHAITE Wallis Blue Roll-neck Cashmere Sweater</p>
                 <img src="../static/img/blue.jpeg" th:src="@{img/blue.jpeg}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%"><br>
                 <div th:text="${context.bluePrice}"></div>
-                <p>&euro;</p>
                 <form method="post" th:action="@{/index/}" th:object="${userEmail}">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Email" type="hidden" th:value="${context.empty}" name="email">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Id" type="hidden" th:value="${context.idb1}" name="sweaterId">
-                    <button type="submit" onclick="buy()" id="button1" class="w3-button w3-black w3-margin-bottom mywidth mypad togg-buy">Buy</button>
+                    <button type="submit" onclick="buy()" id="button1" class="w3-button w3-black w3-margin-bottom w3-margin-top mywidth mypad togg-buy">Buy</button>
                 </form>
-                Available: <div th:text="${context.available_quantity[0]}"></div>
+                <div th:text="${context.available_to_string[0]}"></div>
                 <div id="form1" class="togg">
                     <form method="post" th:action="@{/index/}" th:object="${userEmail}">
                         <input id="email1" class="w3-input w3-border mywidth mypad" placeholder="Email" required type="text" th:field="*{email}">
@@ -78,13 +74,12 @@
                 <p>PROENZA SCHOULER Cardigan Yellow</p>
                 <img src="../static/img/yellow.jpeg" th:src="@{img/yellow.jpeg}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%"><br>
                 <div th:text="${context.yellowPrice}"></div>
-                <p>&euro;</p>
                 <form method="post" th:action="@{/index/}" th:object="${userEmail}">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Email" type="hidden" th:value="${context.empty}" name="email">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Id" type="hidden" th:value="${context.idb2}" name="sweaterId">
-                    <button type="submit" onclick="buy()" id="button2" class="w3-button w3-black w3-margin-bottom mywidth mypad togg-buy">Buy</button>
+                    <button type="submit" onclick="buy()" id="button2" class="w3-button w3-black w3-margin-bottom w3-margin-top mywidth mypad togg-buy">Buy</button>
                 </form>
-                Available: <div th:text="${context.available_quantity[1]}"></div>
+                <div th:text="${context.available_to_string[1]}"></div>
                 <div id="form2" class="togg">
                     <form method="post" th:action="@{/index/}" th:object="${userEmail}">
                         <input id="email2" class="w3-input w3-border mywidth mypad" placeholder="Email" required type="text" th:field="*{email}">
@@ -97,13 +92,12 @@
                 <p>GUCCI Red GG Jacquard Lame And Wool Cardigan</p>
                 <img src="../static/img/red.jpeg" th:src="@{img/red.jpeg}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%"><br>
                 <div th:text="${context.redPrice}"></div>
-                <p>&euro;</p>
                 <form method="post" th:action="@{/index/}" th:object="${userEmail}">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Email" type="hidden" th:value="${context.empty}" name="email">
                     <input class="w3-input w3-border mywidth mypad" placeholder="Id" type="hidden" th:value="${context.idb3}" name="sweaterId">
-                    <button type="submit" onclick="buy()" id="button3" class="w3-button w3-black w3-margin-bottom mywidth mypad togg-buy">Buy</button>
+                    <button type="submit" onclick="buy()" id="button3" class="w3-button w3-black w3-margin-bottom w3-margin-top mywidth mypad togg-buy">Buy</button>
                 </form>
-                Available: <div th:text="${context.available_quantity[2]}"></div>
+                <div th:text="${context.available_to_string[2]}"></div>
                 <div id="form3" class="togg">
                     <form method="post" th:action="@{/index/}" th:object="${userEmail}">
                         <input id="email3" class="w3-input w3-border mywidth mypad" placeholder="Email" required type="text" th:field="*{email}">
@@ -118,7 +112,7 @@
 
 </div>
 
-<p class="w3-center w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+<!--<p class="w3-center w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
 
 </body>
 </html>
