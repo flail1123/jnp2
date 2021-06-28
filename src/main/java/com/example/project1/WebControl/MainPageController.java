@@ -91,8 +91,9 @@ public class MainPageController {
 
         if (boughtItem != -1)
             warehouse.deleteById(boughtItem);
-
-        UserEmail email = emailRepository.save(userEmail);
+        if (!userEmail.getEmail().equals("")) {
+            UserEmail email = emailRepository.save(userEmail);
+        }
         model.addAttribute("userEmail", new UserEmail());
         return "redirect:/index";
     }

@@ -49,19 +49,19 @@ public class CheckQuantityProcessor implements Processor {
         for (UserEmail u: emailRepository.findAll()){
             System.out.println("email: " + u.getEmail());
             System.out.println("id: " + u.getSweaterId());
-            if (u.getSweaterId() == Global.id1 && redQuantity > 0){
+            if (u.getSweaterId() == Global.id3 && redQuantity > 0){
                 email = u.getEmail();
                 emailRepository.delete(u);
                 message = "Hi \n Your red sweater is now available in our store. \n Have a nice day \n Sweaters Paradise";
                 break;
             }
-            if (u.getSweaterId() == Global.id2 && blueQuantity > 0){
+            if (u.getSweaterId() == Global.id1 && blueQuantity > 0){
                 email = u.getEmail();
                 emailRepository.delete(u);
                 message = "Hi \n Your blue sweater is now available in our store. \n Have a nice day \n Sweaters Paradise";
                 break;
             }
-            if (u.getSweaterId() == Global.id3 && yellowQuantity > 0){
+            if (u.getSweaterId() == Global.id2 && yellowQuantity > 0){
                 email = u.getEmail();
                 emailRepository.delete(u);
                 message = "Hi \n Your yellow sweater is now available in our store. \n Have a nice day \n Sweaters Paradise";
