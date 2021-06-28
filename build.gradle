@@ -20,7 +20,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.5.2'
-//    runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	implementation "javax.xml.bind:jaxb-api:2.2.11"
 
@@ -37,9 +36,7 @@ dependencies {
 	implementation "org.apache.camel.springboot:camel-controlbus-starter:$camelVersion"
 
 	implementation "org.apache.camel:camel-quartz:$camelVersion"
-	implementation "org.apache.camel:camel-weather:$camelVersion"
 	implementation "org.apache.camel:camel-rest:$camelVersion"
-	implementation "org.apache.camel:camel-controlbus:$camelVersion"
 
 	implementation "org.apache.camel:camel-core:$camelVersion"
 	implementation group: 'org.apache.camel', name: 'camel-mail', version: '3.9.0'
